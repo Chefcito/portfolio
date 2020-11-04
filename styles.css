@@ -1,6 +1,6 @@
 :root {
-  --heading-font: Montserrat;
-  --body-font: Karla;
+  --heading-font: Montserrat, sans-serif;
+  --body-font: Karla, sans-serif;
   --primary-turquoise: #50b9aa;
   --primary-coffee: #f7bf8e;
   --primary-gold: #ffaf29;
@@ -8,6 +8,7 @@
   --gray-2: #191d26;
   --gray-3: #505050;
   --gray-4: #d7d7d7;
+  --box-shadow: 0 2px 5px rgba(215, 215, 215, 0.5);
 }
 
 html {
@@ -59,12 +60,8 @@ a {
   text-decoration: none;
 }
 
-.wrapper {
-  display: grid;
-}
-
 .header {
-  position: sticky;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 .header nav {
@@ -82,7 +79,7 @@ a {
 }
 
 .header nav ul li {
-  font-family: Karla;
+  font-family: var(--body-font);
   font-size: 18px;
   font-weight: 700;
 }
@@ -98,14 +95,21 @@ a {
 }
 
 .showcase {
-  box-sizing: border-box;
-  min-height: 500px;
+  grid-column: 1 / span 12;
+  min-height: 450px;
   display: grid;
-  grid-template: 1fr / 1fr 1fr;
+  grid-template-columns: repeat(12, 1fr);
   align-items: center;
-  padding: 3rem;
   background-color: var(--gray-1);
   color: var(--gray-4);
+}
+
+.showcase-heading {
+  grid-column: 2 / 6;
+}
+
+.showcase-description {
+  grid-column: 6 / 12;
 }
 
 .showcase p span {
@@ -113,7 +117,71 @@ a {
 }
 
 .projects {
-  display: none;
-  box-sizing: border-box;
+  grid-column: 1 / span 12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
   background-color: var(--gray-2);
+}
+
+.projects > p {
+  grid-column: 2 / span 11;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 3rem 0;
+  color: var(--gray-3);
+}
+
+.projects > hr {
+  grid-column: 2;
+  justify-self: start;
+  margin: 0;
+  outline: none;
+  border: 1px solid var(--gray-3);
+}
+
+.projects-ui-title {
+  font-family: var(--heading-font);
+  color: var(--primary-turquoise);
+}
+
+.projects-ui-title-p {
+  margin: 0;
+  letter-spacing: 5px;
+  color: var(--gray-4);
+}
+
+.projects-ui-main {
+  grid-column: 6 / span 6;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.projects-ui-main > a {
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.2s all ease;
+}
+
+.projects-ui-main > a:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.projects-paycool {
+  background-image: url(./images/paycool.png);
+}
+
+.projects-paperhive {
+  background-image: url(./images/paperhive.png);
+}
+
+.projects-evil-code {
+  background-image: url(./images/evil_code.png);
+}
+
+.projects-tasking {
+  background-image: url(./images/tasking.png);
 }
