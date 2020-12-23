@@ -12,8 +12,68 @@
 
   <body>
     <nav class="sidebar">
-      <img class="sidebar__btn" src="./icons/menu.png" alt="Menu" /> 
+      <div class="sidebar__toggle-box">
+        <img class="sidebar__toggle-box__btn" src="./icons/menu.png" alt="Menu" />
+      </div>
+
+      <div class="sidebar__content-box">
+        <section class="sidebar__content-box__menu">
+          <nav class="sidebar__content-box__menu__nav">
+            <p class="sidebar__content-box__menu__nav__tab">SKILLS</p>
+            <p class="sidebar__content-box__menu__nav__tab">ABOUT</p>
+            <p class="sidebar__content-box__menu__nav__tab">CONTACT</p>
+          </nav>
+        </section>
+
+        <section class="sidebar__content-box__content">
+          <!--
+              <div class="sidebar__content-box__content__skills">
+                <article class="sidebar__content-box__content__skills__skill">
+                  <h3>UI DESIGN</h3>
+                  <p>I love making innovative solutions for those who want to stand out. I usually build user interfaces using Figma and Adobe Illustrator.</p>
+                </article>
+    
+                <article class="sidebar__content-box__content__skills__skill">
+                  <h3>PROTOTYPING</h3>
+                  <p>I make effective prototypes as an useful method for testing ideas. I’m used to make prototypes using tools like Adobe XD and Figma.</p>
+                </article>
+    
+                <article class="sidebar__content-box__content__skills__skill">
+                  <h3>FRONTEND DEV.</h3>
+                  <p>I use modern web technologies such as React.js and other javascript libraries to bring my projects to life.</p>
+                </article>
+              </div> 
+
+              <div class="sidebar__content-box__content__about-me">
+                <h3>ABOUT MY WORK</h3>
+                <p>I love making minimalist but effective designs to create wonderful experiences. I’m very open to criticism about my work that helps me design higher quality products, to stay motivated to learn new things and keep improving everyday.</p>
+              </div>
+              
+              <div class="sidebar__content-box__content__contact">
+                <h4>LET'S MAKE</h4>
+                <h3>AWESOME PROJECTS</h3>
+                <div>
+                  <p><strong>contact me at</strong></p>
+                  <p>•</p>
+                  <p>joansebastian35@gmail.com</p>
+                </div>
+              </div>
+            -->
+        </section>
+
+        <section class="sidebar__content-box__socials">
+          <a target="_blank" href="https://www.behance.net/Chefcito">
+            <img src="./icons/behance.png" alt="Behance">
+          </a>
+
+          <a target="_blank" href="https://www.linkedin.com/in/joan-sebastian-c%C3%A1liz-ortiz-4a3a37180/">
+            <img src="./icons/linkedin.png" alt="Linkedin">
+          </a>
+        </section>
+      </div>
     </nav>
+
+    <div class="backdrop"></div>
 
     <div class="main-content">
       <section class="profile">
@@ -27,7 +87,7 @@
 
       <section class="projects">
         <p>MY PROJECTS</p>
-        
+
         <div class="projects__board">
           <a target="_blank" href="https://www.behance.net/gallery/109561067/BESTGG">
             <img src="./images/bestgg.png" alt="Best.GG Project">
